@@ -5,5 +5,8 @@ def join_nested_strings(src)
   
   src.each do |inner_array|
     inner_array.each do |element|
-      str = str + "#{element} " if element
+      str = str + "#{element} " if element.is_a? String
+    end
+  end
+  str.chomp!(" ")
 end
